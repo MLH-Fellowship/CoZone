@@ -1,0 +1,250 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/Background.jpg" type="Texture" id=2]
+[ext_resource path="res://Sprites/Ground.jpg" type="Texture" id=3]
+[ext_resource path="res://Sprites/Moon.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5457.31, 55.0145 )
+
+[node name="Gameplay" type="Node2D"]
+
+[node name="BG Parent" type="Node2D" parent="."]
+
+[node name="Background1" type="Sprite" parent="BG Parent"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background2" type="Sprite" parent="BG Parent"]
+position = Vector2( 0, -720 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background11" type="Sprite" parent="BG Parent"]
+position = Vector2( -1280, 0 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background12" type="Sprite" parent="BG Parent"]
+position = Vector2( -1280, -720 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background3" type="Sprite" parent="BG Parent"]
+position = Vector2( 1280, 0 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background4" type="Sprite" parent="BG Parent"]
+position = Vector2( 1280, -720 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background13" type="Sprite" parent="BG Parent"]
+position = Vector2( -2560, 0 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background14" type="Sprite" parent="BG Parent"]
+position = Vector2( -2560, -720 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background5" type="Sprite" parent="BG Parent"]
+position = Vector2( 2560, 0 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background6" type="Sprite" parent="BG Parent"]
+position = Vector2( 2560, -720 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background15" type="Sprite" parent="BG Parent"]
+position = Vector2( -3845.34, 0 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background16" type="Sprite" parent="BG Parent"]
+position = Vector2( -3845.34, -720 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background17" type="Sprite" parent="BG Parent"]
+position = Vector2( -5120, 0 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background18" type="Sprite" parent="BG Parent"]
+position = Vector2( -5120, -720 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background7" type="Sprite" parent="BG Parent"]
+position = Vector2( 3845.34, -720 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background8" type="Sprite" parent="BG Parent"]
+position = Vector2( 3845.97, 0 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background9" type="Sprite" parent="BG Parent"]
+position = Vector2( 5120, -720 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background10" type="Sprite" parent="BG Parent"]
+position = Vector2( 5120, 0 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Moon" type="Sprite" parent="BG Parent"]
+position = Vector2( 57.4668, 146.024 )
+texture = ExtResource( 4 )
+
+[node name="Groud Parent" type="StaticBody2D" parent="."]
+
+[node name="Ground" type="Sprite" parent="Groud Parent"]
+position = Vector2( 0, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground2" type="Sprite" parent="Groud Parent"]
+position = Vector2( 450, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground3" type="Sprite" parent="Groud Parent"]
+position = Vector2( 900, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground4" type="Sprite" parent="Groud Parent"]
+position = Vector2( 1350, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground5" type="Sprite" parent="Groud Parent"]
+position = Vector2( 1750, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground6" type="Sprite" parent="Groud Parent"]
+position = Vector2( 2150, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground7" type="Sprite" parent="Groud Parent"]
+position = Vector2( 2600, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground8" type="Sprite" parent="Groud Parent"]
+position = Vector2( 3050, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground9" type="Sprite" parent="Groud Parent"]
+position = Vector2( 3500, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground10" type="Sprite" parent="Groud Parent"]
+position = Vector2( 3950, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground11" type="Sprite" parent="Groud Parent"]
+position = Vector2( 4400, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground12" type="Sprite" parent="Groud Parent"]
+position = Vector2( 4850, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground13" type="Sprite" parent="Groud Parent"]
+position = Vector2( 5300, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground14" type="Sprite" parent="Groud Parent"]
+position = Vector2( 5750, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground15" type="Sprite" parent="Groud Parent"]
+position = Vector2( 6200, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground16" type="Sprite" parent="Groud Parent"]
+position = Vector2( -450, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground17" type="Sprite" parent="Groud Parent"]
+position = Vector2( -900, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground18" type="Sprite" parent="Groud Parent"]
+position = Vector2( -1350, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground19" type="Sprite" parent="Groud Parent"]
+position = Vector2( -1800, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground20" type="Sprite" parent="Groud Parent"]
+position = Vector2( -2250, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground21" type="Sprite" parent="Groud Parent"]
+position = Vector2( -2700, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground22" type="Sprite" parent="Groud Parent"]
+position = Vector2( -3150, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground23" type="Sprite" parent="Groud Parent"]
+position = Vector2( -3600, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground24" type="Sprite" parent="Groud Parent"]
+position = Vector2( -4050, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground25" type="Sprite" parent="Groud Parent"]
+position = Vector2( -4500, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground26" type="Sprite" parent="Groud Parent"]
+position = Vector2( -4900, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Ground27" type="Sprite" parent="Groud Parent"]
+position = Vector2( -5350, 652 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Groud Parent"]
+position = Vector2( 1191.33, 715.786 )
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 524, 276 )

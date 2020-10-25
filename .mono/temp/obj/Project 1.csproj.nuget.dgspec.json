@@ -1,0 +1,52 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Godot Game Dev\\Projects\\Project 1\\Project 1.csproj": {}
+  },
+  "projects": {
+    "E:\\Godot Game Dev\\Projects\\Project 1\\Project 1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Godot Game Dev\\Projects\\Project 1\\Project 1.csproj",
+        "projectName": "Project 1",
+        "projectPath": "E:\\Godot Game Dev\\Projects\\Project 1\\Project 1.csproj",
+        "packagesPath": "C:\\Users\\Ajitesh\\.nuget\\packages\\",
+        "outputPath": "E:\\Godot Game Dev\\Projects\\Project 1\\.mono\\temp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ajitesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "target": "Package",
+              "version": "[1.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
