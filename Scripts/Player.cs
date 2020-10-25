@@ -56,4 +56,12 @@ public class Player : KinematicBody2D {
             animation.Play("Idle");
         }
     }
+
+    void _on_Body_entered(PhysicsBody2D body) {
+        if (body.IsInGroup("Enemy")) {
+            GetParent().GetNode<CameraFollow>("Main Cam").playerDied = true;
+            GetParent<GamePlay>().PlayerDied();
+            QueueFree();
+        }
+    }
 }

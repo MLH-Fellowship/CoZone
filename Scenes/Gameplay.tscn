@@ -1,16 +1,23 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/Background.jpg" type="Texture" id=2]
 [ext_resource path="res://Sprites/Ground.jpg" type="Texture" id=3]
 [ext_resource path="res://Sprites/Moon.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/CameraFollow.cs" type="Script" id=5]
-[ext_resource path="res://Scenes/Ghost.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Green Zombie.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/GamePlay.cs" type="Script" id=7]
+[ext_resource path="res://Scenes/Ghost.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Red Zombie.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5457.31, 55.0145 )
+extents = Vector2( 6283.84, 55.0145 )
 
 [node name="Gameplay" type="Node2D"]
+script = ExtResource( 7 )
+greenZombie = ExtResource( 6 )
+redZombie = ExtResource( 9 )
+ghost = ExtResource( 8 )
 
 [node name="BG Parent" type="Node2D" parent="."]
 
@@ -64,12 +71,12 @@ texture = ExtResource( 2 )
 centered = false
 
 [node name="Background15" type="Sprite" parent="BG Parent"]
-position = Vector2( -3845.34, 0 )
+position = Vector2( -3840, 0 )
 texture = ExtResource( 2 )
 centered = false
 
 [node name="Background16" type="Sprite" parent="BG Parent"]
-position = Vector2( -3845.34, -720 )
+position = Vector2( -3840, -720 )
 texture = ExtResource( 2 )
 centered = false
 
@@ -84,12 +91,12 @@ texture = ExtResource( 2 )
 centered = false
 
 [node name="Background7" type="Sprite" parent="BG Parent"]
-position = Vector2( 3845.34, -720 )
+position = Vector2( 3840, -720 )
 texture = ExtResource( 2 )
 centered = false
 
 [node name="Background8" type="Sprite" parent="BG Parent"]
-position = Vector2( 3845.97, 0 )
+position = Vector2( 3840, 0 )
 texture = ExtResource( 2 )
 centered = false
 
@@ -245,16 +252,23 @@ texture = ExtResource( 3 )
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Groud Parent"]
-position = Vector2( 1191.33, 715.786 )
+position = Vector2( 881.646, 715.786 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 524, 276 )
 
-[node name="Ghost" parent="." instance=ExtResource( 6 )]
-position = Vector2( -876.381, 520.181 )
-
 [node name="Main Cam" type="Camera2D" parent="."]
 position = Vector2( 640, 360 )
 current = true
 script = ExtResource( 5 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Restart" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Monster_Spawn"]
+[connection signal="timeout" from="Restart" to="." method="_on_player_Died"]

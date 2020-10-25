@@ -20,13 +20,16 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 61.0835, 104.754 )
 
-[node name="Green Zombie" type="KinematicBody2D"]
+[node name="Green Zombie" type="KinematicBody2D" groups=[
+"Enemy",
+]]
+collision_mask = 2147483650
 script = ExtResource( 8 )
 
 [node name="Animation" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Walk"
-frame = 1
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
