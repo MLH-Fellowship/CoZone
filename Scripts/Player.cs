@@ -35,7 +35,13 @@ public class Player : KinematicBody2D {
             movement.x = 0f;
             AnimateMovement(false, true);
         }
-        MoveAndSlide(movement);
+
+        if (IsOnFloor()) {
+            if (Input.IsActionPressed("jump")) {
+                movement.y = jump_Force;
+            }
+        }
+        movement = MoveAndSlide(movement, up_Dir);
     }
 
     void AnimateMovement(bool moving, bool moveRight) {
