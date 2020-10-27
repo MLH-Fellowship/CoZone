@@ -35,7 +35,13 @@ public class Player : KinematicBody2D {
             movement.x = 0f;
             AnimateMovement(false, true);
         }
-        MoveAndSlide(movement);
+
+        if (IsOnFloor()) {
+            if (Input.IsActionPressed("jump")) {
+                movement.y = jump_Force;
+            }
+        }
+        movement = MoveAndSlide(movement, up_Dir);
     }
 
     void AnimateMovement(bool moving, bool moveRight) {
@@ -48,6 +54,14 @@ public class Player : KinematicBody2D {
             }
         } else {
             animation.Play("Idle");
+        }
+    }
+
+    void _on_Body_entered(PhysicsBody2D body) {
+        if (body.IsInGroup("Enemy")) {
+            GetParent().GetNode<CameraFollow>("Main Cam").playerDied = true;
+            GetParent<GamePlay>().PlayerDied();
+            QueueFree();
         }
     }
 }
