@@ -27,9 +27,13 @@ public class Player : KinematicBody2D {
         movement.y += gravity;
         if (Input.IsActionPressed("move_right")) {
             movement.x = move_Speed;
+                    animation.Play("Walk");
+
             AnimateMovement(true, true);
         } else if (Input.IsActionPressed("move_left")) {
             movement.x = -move_Speed;
+                    animation.Play("Walk");
+
             AnimateMovement(true, false);
         } else {
             movement.x = 0f;
@@ -45,6 +49,8 @@ public class Player : KinematicBody2D {
     }
 
     void AnimateMovement(bool moving, bool moveRight) {
+        animation.Play("Walk");
+
         if (moving) {
             animation.Play("Walk");
             if (moveRight) {
@@ -53,7 +59,7 @@ public class Player : KinematicBody2D {
                 animation.FlipH = true;
             }
         } else {
-            animation.Play("Idle");
+            // animation.Play("Idle");
         }
     }
 

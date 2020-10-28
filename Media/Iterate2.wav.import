@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Iterate2.wav-afca5aecf01aafcbcf64dd55ffba5eea.sample"
+
+[deps]
+
+source_file="res://Media/Iterate2.wav"
+dest_files=[ "res://.import/Iterate2.wav-afca5aecf01aafcbcf64dd55ffba5eea.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
